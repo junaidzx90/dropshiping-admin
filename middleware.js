@@ -1,10 +1,8 @@
 import { NextResponse } from "next/server";
 
 export default async function Middleware(request){
-    // const session = await updateSession(request);
-    // if(session){
-        
-    // }
+    // Nothing doing here at this time
 
+    // Returning default value
     return NextResponse.next();
 }
