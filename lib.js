@@ -35,11 +35,13 @@ export async function SignIn(formdata) {
     return false;
 }
 
+// Getting user data information from database
 export async function getUserData(){
     await DbConnect();
     const uid = await getSession();
     if(mongoose.Types.ObjectId.isValid(uid)){
         const result = await User.findById(uid);
+        // Passing plain data to the client
         return JSON.stringify(result);
     }
 
